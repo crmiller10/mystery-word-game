@@ -21,13 +21,13 @@
 			</div>
 
 			<form action="/guess" method="post" class="game-form" autocomplete="off">
-				<input type="text" class="userChoice" name="guess" id="userGuess" maxlength="1" autofocus="autofocus">
+				<input type="text" class="form-input" name="guess" id="form-input" maxlength="1" autofocus="autofocus">
 				<input class="form-button" type="submit" value="Submit">
 			</form>
 
 			<p>Letters Guessed : {{game.userDisplayGuessed}}</p>
 		</div>
-		<p class="">{{game.computerWord}}</p>
+		<!-- <p class="">{{game.computerWord}}</p> -->
 
 	</main>
 </body>
