@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Word Guess</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<div class="game">
+			<div class="status-bar">
+				<p class="title">Mystery Word Game</p>
+				<p class="guess-count">You have {{game.guessCount}} guesses left.</p>
+			</div>
+			<div class="word-display">
+				<p class="word-holder">{{game.userDisplayString}}</p>
+				<p class="message">{{game.message}}</p>
+			</div>
+
+			<form action="/guess" method="post" class="game-form" autocomplete="off">
+				<input type="text" class="userChoice" name="guess" id="userGuess" maxlength="1" autofocus="autofocus">
+				<input class="form-button" type="submit" value="Submit">
+			</form>
+
+			<p>Letters Guessed : {{game.userDisplayGuessed}}</p>
+		</div>
+		<p class="">{{game.computerWord}}</p>
+
+	</main>
+</body>
+</html>
